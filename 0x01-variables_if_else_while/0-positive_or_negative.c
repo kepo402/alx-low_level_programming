@@ -24,7 +24,7 @@ int main(void)
 	}
 	else 
 	{
-		printf("%d is %/n", n, "zero");
+		printf("%d is %s/n", n, "zero");
 	}		
 	return (0);
-
+}

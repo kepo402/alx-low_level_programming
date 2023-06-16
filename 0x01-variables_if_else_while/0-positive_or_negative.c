@@ -3,8 +3,9 @@
 /* more headers goes there */
 #include <stdio.h>
 /**
- * main - determine if a number is negative, positive or zero
- * Return - 0 on success
+ * main - entry point
+ * description: check for number if it is positive or negative
+ * Return - always 0
  */
 
 int main(void)
@@ -16,15 +17,15 @@ int main(void)
 	/* your code goes there */
 	if (n > 0)
 	{
-		printf("%d is %s/n", n, "positive");
+		printf("%d is positive/n", n);
 	}
 	else if (n < 0)
 	{
-		printf("%d is %s/n", n, "negative");
+		printf("%d is negative/n", n);
 	}
 	else 
 	{
-		printf("%d is %s/n", n, "zero");
+		printf("%d is zero/n", n);
 	}		
 	return (0);
 }

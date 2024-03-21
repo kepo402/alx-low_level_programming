@@ -1,11 +1,18 @@
 #!/usr/bin/python3
-def ispalindrome(n):
-    string = str(n)
-    return string == string[::-1]
+def is_palindrome(n):
+    return str(n) == str(n)[::-1]
 
-array = []
-for i in range(999, 99, -1):
-    for j in range(i, 99, -1):
-        if ispalindrome(i * j):
-            array.append(i * j)
-print(max(array))
+def largest_palindrome():
+    max_palindrome = 0
+    for i in range(100, 1000):
+        for j in range(i, 1000):  # Start from i to avoid duplicate products
+            product = i * j
+            if is_palindrome(product) and product > max_palindrome:
+                max_palindrome = product
+    return max_palindrome
+
+result = largest_palindrome()
+
+# Save result to file
+with open("alx-low_level_programming/0x17-doubly_linked_lists/102-result", "w") as file:
+    file.write(str(result)
